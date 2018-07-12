@@ -8,16 +8,17 @@ matrix:
   include:
     - python: '2.7'
       env:
-       - TOX_ENV=py2
+       - TOX_ENV=py2-django1
+    - python: '3.6'
+      env:
+       - TOX_ENV=py3-django1
+    - python: '3.6'
+      env:
+       - TOX_ENV=py3-django2
     - python: '2.7'
       env:
        - TOX_ENV=prospector
-    - python: '2.7'
-      env:
-       - TOX_ENV=check_readme
-    - python: '3.6'
-      env:
-       - TOX_ENV=py3
+
 cache:
   files:
   - $HOME/.pip/cache
